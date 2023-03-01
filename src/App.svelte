@@ -12,8 +12,8 @@
     let checked = localStorage.theme === "light";
 </script>
 
-<main class="mx-auto w-5/6 sm:w-3/4 lg:w-[51.5%] my-7">
-    <div class="flex justify-between mb-6">
+<main class="mx-auto w-5/6 sm:w-3/4 lg:w-[51.5%] mt-9">
+    <div class="flex justify-between mb-6 items-center">
         <h1 class="text-4xl font-semibold dark:text-zinc-50">SafeSend</h1>
         <input
             type="checkbox"
@@ -22,7 +22,10 @@
             data-toggle-theme="dark,light"
             bind:checked
         />
-        <label class="w-6 h-6 text-zinc-400" for="checkbox">
+        <label
+            class="w-9 h-9 text-zinc-700 dark:text-zinc-300 cursor-pointer"
+            for="checkbox"
+        >
             {#if checked}
                 <IoMdSunny />
             {:else}
