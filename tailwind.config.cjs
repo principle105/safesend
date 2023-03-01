@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./index.html", "./src/**/*.{svelte,js,ts}"],
-    darkMode: "dark",
+    darkMode: ["class", '[data-theme="dark"]'],
     theme: {
         extend: {},
     },
-    plugins: [require("daisyui")],
 };

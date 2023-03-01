@@ -8,7 +8,7 @@
 </script>
 
 <main class="m-auto w-5/6 sm:w-3/4 lg:w-[51.5%]">
-    <h1 class="text-4xl font-semibold">SafeSend</h1>
+    <h1 class="text-4xl font-semibold dark:text-zinc-50">SafeSend</h1>
     <input
         type="checkbox"
         data-toggle-theme="dark,light"
