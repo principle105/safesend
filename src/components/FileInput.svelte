@@ -1,3 +1,7 @@
+<script lang="ts">
+    export let files: FileList | null = null;
+</script>
+
 <div class="flex items-center justify-center w-full">
     <label
         for="dropzone-file"
@@ -21,8 +25,16 @@
             <p class="mb-2 text-sm text-zinc-500 dark:text-zinc-400">
                 <span class="font-semibold">Click to upload</span> or drag and drop
             </p>
-            <p class="text-xs text-zinc-500 dark:text-zinc-400">Up to 1GB</p>
+            {#if files}
+                <p class="text-xs text-blue-700 dark:text-blue-400">
+                    {files[0].name}
+                </p>
+            {:else}
+                <p class="text-xs text-zinc-500 dark:text-zinc-400">
+                    Up to 1GB
+                </p>
+            {/if}
         </div>
-        <input id="dropzone-file" type="file" class="hidden" />
+        <input id="dropzone-file" type="file" class="hidden" bind:files />
     </label>
 </div>
